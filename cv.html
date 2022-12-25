@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+        .image{
+            width:400px;
+            max-height:300px;
+            background-color:pink;
+        }
+        .v23{
+            display: flex;
+            border:solid 5px pink;
+        }
+        .v2{
+            width:400px;
+            float: left;
+            background-color:pink;
+        }
+        .v3{
+            float: right;
+        }
+        .v2 input{
+            width:250px;
+            margin:20px;
+            border:solid 1.2px black;
+            font-size:1em;
+        }
+        .v2 textarea{
+            margin:20px;
+            font-size:1em;
+        }
+        .lb{
+           text-align: center;
+            font-size:1.5em;
+        }
+        .v3 input{
+            border:solid 1.2px black;
+            margin:20px;
+            font-size:1em;
+        }
+        .v3 textarea{
+            margin:20px;
+            font-size:1em;
+        }
+        hr{
+            background-color:pink;
+            color:pink;
+            height:5px;
+            margin:20px;
+        }
+        .lb1{
+            margin:20px;
+            text-align: center;
+            padding: 10px;
+            font-size:1.5em;
+            background-color: peru; 
+        }
+        .v3 label{
+            margin:20px;
+        }
+         .i3{
+            width:20px;
+            height:20px;
+         }
+         .btn{
+            background-color: blue;
+            color:white;
+            width:100px;
+            padding:6px;
+         }
+    </style>
+</head>
+<body>
+    <form class="form" id="form"style="max-width: none; width: 1035px;">
+  <div class="v23">
+   <div class="v2">
+    <img src="#" id="image" class="image">
+    <label for="photo" id="labelx">Image</label><input id="imgx"type="file" name="picture" onchange="previewPicture(this)"/><br>
+   
+    <img class="i3"src="i1.jpg" alt="tel"><input type="text" name="tel" id="x1"><br/>
+    <img class="i3"src="i2.jpg" alt="gmail"><input type="text" name="gmail" id="x2"><br/>
+    <img class="i3"src="i3.jpg" alt="dar"><input type="text" name="adress"id="x3"><br/>
+
+    <p class="lb"for="Langues">Langues</p> <br><textarea id="x4"name="langues" id="" cols="45" rows="10"></textarea><br/>
+    <p class="lb"for="Informatique">Informatique</p><br><textarea id="x5"name="informatique" id="" cols="45" rows="10"></textarea><br/>
+    <p class="lb"for="centre">Centre d'interet</p><br><textarea id="x6"name="centre" id="" cols="45" rows="10"></textarea><br/>
+    </div>
+    <div class="v3">
+   <label id="lx1"for="Nom">Nom complet :</label><input type="text" name="nom" id="x7"><br/>
+    <label id="lx2"for="metier">metier : </label><input type="text" name="metier"id="x8"><b>,</b>
+    <label id="lx3"style="margin-left:0px;" for="Age">Age :</label><input style="width:20px;margin-left:0px;margin-right:0px;"type="text" name="age"id="x9"><b>Ans</b><br/>
+    <hr>
+    <p class="lb1"for="Profil">Profil</p><br><textarea id="x11"name="profil" id="" cols="80" rows="15"></textarea><br/>
+    <p class="lb1"for="education">Education</p><br><textarea id="x22"name="education" id="" cols="80" rows="15"></textarea><br/>
+    <p class="lb1"for="exp">Experiences</p><br><textarea id="x33"name="exp" id="" cols="80" rows="20"></textarea><br/>
+    </div>
+    </div>
+    <input class="btn" id="btn"type="button" onclick="clc();" value="Terminer"/>
+    </form>
+    </form>
+    <script>
+        function clc() {
+            document.getElementById('x1').style.borderColor="pink";
+            document.getElementById('x1').style.backgroundColor="pink";
+            document.getElementById('x2').style.borderColor="pink";
+            document.getElementById('x2').style.backgroundColor="pink";
+            document.getElementById('x3').style.backgroundColor="pink";
+            document.getElementById('x3').style.borderColor="pink";
+            document.getElementById('x4').style.borderColor="pink";
+            document.getElementById('x4').style.backgroundColor="pink";
+            document.getElementById('x5').style.borderColor="pink";
+            document.getElementById('x5').style.backgroundColor="pink";
+            document.getElementById('x6').style.borderColor="pink";
+            document.getElementById('x6').style.backgroundColor="pink";
+            document.getElementById('x7').style.borderColor="white";
+            document.getElementById('x7').style.backgroundColor="white";
+            document.getElementById('x8').style.borderColor="white";
+            document.getElementById('x8').style.backgroundColor="white";
+            document.getElementById('x9').style.borderColor="white";
+            document.getElementById('x9').style.backgroundColor="white";
+            document.getElementById('x11').style.borderColor="white";
+            document.getElementById('x11').style.backgroundColor="white";
+            document.getElementById('x22').style.borderColor="white";
+            document.getElementById('x22').style.backgroundColor="white";
+            document.getElementById('x33').style.borderColor="white";
+            document.getElementById('x33').style.backgroundColor="white";
+            document.getElementById('imgx').style.display="none";
+            document.getElementById('labelx').style.display="none";
+            document.getElementById('lx1').style.display="none";
+            document.getElementById('lx2').style.display="none";
+            document.getElementById('lx3').style.display="none";
+            document.getElementById('btn').style.display="none";
+        }
+        var image=document.getElementById('image');
+          var previewPicture=function(e){
+            const[picture]=e.files;
+            if(picture){
+                image.src=URL.createObjectURL(picture);
+            }
+        }
+    </script>
+</body>
+</html>
